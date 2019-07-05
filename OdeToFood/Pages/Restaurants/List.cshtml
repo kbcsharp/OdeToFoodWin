@@ -8,7 +8,7 @@
 <form method="get">
     <div class="form-group">
         <div class="input-group">
-            <input type="search" class="form-control" asp-for="SearchTerm"/>
+            <input type="search" class="form-control" asp-for="SearchTerm" />
             <span>
                 <button class="btn btn-group">
                     <i class="fas fa-search"></i>
@@ -32,6 +32,12 @@
             <td>@restaraunt.Cuisine</td>
             <td>
                 <a asp-page="./Detail" asp-route-restaurantId="@restaraunt.Id">
+                    <i class="fas fa-search-plus"></i>
+
+                </a>
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-restaurantId="@restaraunt.Id">
                     <i class="fas fa-edit"></i>
                 </a>
             </td>
