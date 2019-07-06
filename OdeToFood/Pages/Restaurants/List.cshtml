@@ -3,6 +3,10 @@
 @{
 }
 
+@if (Model.Message != null)
+{
+    <div class="alert alert-info">@Model.Message</div>
+}
 <h1>Restaurants</h1>
 
 <form method="get">
@@ -41,11 +45,18 @@
                     <i class="fas fa-edit"></i>
                 </a>
             </td>
+            <td>
+                <a asp-page="./Delete" asp-route-restaurantId="@restaraunt.Id">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </td>
         </tr>
     }
 </table>
 
 <a asp-page="./Edit" class="btn btn-primary">Add New</a>
 
+@*@section Footer {
+    <div>@Model.NewMessage</div>
+}*@
 
-<div>@Model.Message</div>
