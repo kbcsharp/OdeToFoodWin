@@ -1,15 +1,15 @@
 ﻿@using OdeToFood.core
 @model Restaurant
 
-<div class="card">
+<div class="card box-shadow ">
     <div class="card-header">
         <h3>@Model.Name</h3>
     </div>
     <div class="card-body">
-        <span>Location: @Model.Location</span>
-        <span>Cuisine: @Model.Cuisine</span>
+        <p>Location: @Model.Location</p>
+        <p>Cuisine: @Model.Cuisine</p>
     </div>
-    <div class="card-footer">
+    <div class="card-footer center">
         <a asp-page="./Detail" asp-route-restaurantId="@Model.Id">
             <i class="fas fa-search-plus pl-2 pr-2"></i>
 
